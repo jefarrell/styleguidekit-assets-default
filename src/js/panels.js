@@ -18,6 +18,7 @@ var Panels = {
   },
   
   get: function() {
+    console.log(this.panels);
     return JSON.parse(JSON.stringify(this.panels));
   },
   
@@ -42,8 +43,11 @@ var fileSuffixPattern = ((config.outputFileSuffixes !== undefined) && (config.ou
 var fileSuffixMarkup  = ((config.outputFileSuffixes !== undefined) && (config.outputFileSuffixes.markupOnly !== undefined)) ? config.outputFileSuffixes.markupOnly : '.markup-only';
 
 // add the default panels
-Panels.add({ 'id': 'sg-panel-pattern', 'default': true, 'templateID': 'pl-panel-template-code', 'httpRequest': true, 'httpRequestReplace': fileSuffixPattern, 'httpRequestCompleted': false, 'prismHighlight': true, 'keyCombo': 'ctrl+shift+u' });
-Panels.add({ 'id': 'sg-panel-html', 'name': 'HTML', 'default': false, 'templateID': 'pl-panel-template-code', 'httpRequest': true, 'httpRequestReplace': fileSuffixMarkup+'.html', 'httpRequestCompleted': false, 'prismHighlight': true, 'language': 'markup', 'keyCombo': 'ctrl+shift+y' });
-
+// Don't show mustache panel
+// Panels.add({ 'id': 'sg-panel-pattern', 'default': true, 'templateID': 'pl-panel-template-code', 'httpRequest': true, 'httpRequestReplace': fileSuffixPattern, 'httpRequestCompleted': false, 'prismHighlight': true, 'keyCombo': 'ctrl+shift+u' });
+Panels.add({ 'id': 'sg-panel-html', 'name': 'HTML', 'default': true, 'templateID': 'pl-panel-template-code', 'httpRequest': true, 'httpRequestReplace': fileSuffixMarkup +'.html', 'httpRequestCompleted': false, 'prismHighlight': true, 'language': 'markup', 'keyCombo': 'ctrl+shift+y' });
+Panels.add({ 'id': 'sg-panel-css', 'name': 'CSS', 'default': false, 'templateID': 'pl-panel-template-code', 'httpRequest': true, 'httpRequestReplace': '.css', 'httpRequestCompleted': false, 'prismHighlight': true, 'language': 'css', 'keyCombo': 'ctrl+shift+y' });
+// Explore getting gherkin working
+// Panels.add({ 'id': 'sg-panel-css', 'name': 'FEATURE', 'default': false, 'templateID': 'pl-panel-template-code', 'httpRequest': true, 'httpRequestReplace': '.feature', 'httpRequestCompleted': false, 'prismHighlight': true, 'language': 'gherkin', 'keyCombo': 'ctrl+shift+t' });
 // gather panels from plugins
 Dispatcher.trigger('setupPanels');

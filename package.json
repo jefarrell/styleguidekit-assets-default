@@ -19,7 +19,7 @@
   "homepage": "https://github.com/pattern-lab/styleguidekit-assets-default",
   "devDependencies": {
     "del": "^1.1.1",
-    "gulp": "^3.8.6",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^2.1",
     "gulp-concat": "^2.3.4",
     "gulp-file-include": "^0.13.7",

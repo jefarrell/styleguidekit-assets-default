@@ -74,15 +74,15 @@ var panelsViewer = {
           var e        = new XMLHttpRequest();
           e.onload     = (function(i, panels, patternData, iframeRequest) {
             return function() {
-              prismedContent    = Prism.highlight(this.responseText, Prism.languages['html']);
+              const language = panels[i].language === 'mustache' ? 'html' : panels[i].language
+              prismedContent    = Prism.highlight(this.responseText, Prism.languages[language]);
               template          = document.getElementById(panels[i].templateID);
               templateCompiled  = Hogan.compile(template.innerHTML);
-              templateRendered  = templateCompiled.render({ 'language': 'html', 'code': prismedContent });
+              templateRendered  = templateCompiled.render({ 'language': language, 'code': prismedContent });
               panels[i].content = templateRendered;
               Dispatcher.trigger('checkPanels', [panels, patternData, iframePassback, switchText]);
             };
           })(i, panels, patternData, iframePassback);
-          
           e.open('GET', fileBase+panel.httpRequestReplace+'?'+(new Date()).getTime(), true);
           e.send();
 
