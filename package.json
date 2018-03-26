@@ -1,22 +1,28 @@
 {
-  "name": "styleguidekit-assets-default",
-  "version": "3.5.0",
-  "description": "The default set of front-end assets for Pattern Lab.",
+  "name": "styleguidekit-assets-css-tabs",
+  "version": "1.0.0",
+  "description": "The default set of front-end assets for Pattern Lab with added CSS tabs.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/pattern-lab/styleguidekit-assets-default.git"
+    "url": "git://github.com/jefarrell/styleguidekit-assets-default.git"
   },
-  "author": "Dave Olsen",
+  "author": "Thomas Bruketta",
   "contributors": [
     {
+      "name": "John Farrell"
+    },
+    {
       "name": "Brian Muenzenmeyer"
+    },
+    {
+      "name": "Dave Olsen"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pattern-lab/styleguidekit-assets-default/issues"
+    "url": "https://github.com/jefarrell/styleguidekit-assets-default/issues"
   },
-  "homepage": "https://github.com/pattern-lab/styleguidekit-assets-default",
+  "homepage": "https://github.com/jefarrell/styleguidekit-assets-default",
   "devDependencies": {
     "del": "^1.1.1",
     "gulp": "^3.9.1",
