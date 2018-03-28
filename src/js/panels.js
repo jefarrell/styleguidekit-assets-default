@@ -45,6 +45,6 @@ var fileSuffixMarkup  = ((config.outputFileSuffixes !== undefined) && (config.ou
 // Don't show mustache panel
 // Panels.add({ 'id': 'sg-panel-pattern', 'default': true, 'templateID': 'pl-panel-template-code', 'httpRequest': true, 'httpRequestReplace': fileSuffixPattern, 'httpRequestCompleted': false, 'prismHighlight': true, 'keyCombo': 'ctrl+shift+u' });
 Panels.add({ 'id': 'sg-panel-html', 'name': 'HTML', 'default': true, 'templateID': 'pl-panel-template-code', 'httpRequest': true, 'httpRequestReplace': fileSuffixMarkup +'.html', 'httpRequestCompleted': false, 'prismHighlight': true, 'language': 'markup', 'keyCombo': 'ctrl+shift+y' });
-Panels.add({ 'id': 'sg-panel-css', 'name': 'CSS', 'default': false, 'templateID': 'pl-panel-template-code', 'httpRequest': true, 'httpRequestReplace': '.css', 'httpRequestCompleted': false, 'prismHighlight': true, 'language': 'css', 'keyCombo': 'ctrl+shift+y' });
+Panels.add({ 'id': 'sg-panel-scss', 'name': 'SCSS', 'default': false, 'templateID': 'pl-panel-template-code', 'httpRequest': true, 'httpRequestReplace': '.scss', 'httpRequestCompleted': false, 'prismHighlight': true, 'language': 'css', 'keyCombo': 'ctrl+shift+y' });
 // gather panels from plugins
 Dispatcher.trigger('setupPanels');

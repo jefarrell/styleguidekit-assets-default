@@ -6,6 +6,7 @@
  *
  * @requires panels.js
  * @requires url-handler.js
+ *
  */
 
 var panelsViewer = {
@@ -74,7 +75,7 @@ var panelsViewer = {
           var e        = new XMLHttpRequest();
           e.onload     = (function(i, panels, patternData, iframeRequest) {
             return function() {
-              const language = panels[i].language === 'mustache' ? 'html' : panels[i].language
+              var language = panels[i].language === 'mustache' ? 'html' : panels[i].language;
               prismedContent    = Prism.highlight(this.responseText, Prism.languages[language]);
               template          = document.getElementById(panels[i].templateID);
               templateCompiled  = Hogan.compile(template.innerHTML);
