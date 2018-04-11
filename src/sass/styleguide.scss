@@ -499,12 +499,13 @@ $sg-border-radius-med : 6px;
 */
 .sg-input {
     margin: -2px 0 0 0;
-    padding: 0.1em .2em;
+    padding: 0.1em .3em;
     border: 0;
     font-weight: 600;
+    font-size: 14px;
     background: $sg-white;
     color: $sg-black;
-    width: 30px;
+    width: 55px;
     text-align: right;
     transition: all $sg-animate-quick ease-out;
 
@@ -515,15 +516,15 @@ $sg-border-radius-med : 6px;
     &:active, &:focus {
         outline: 0;
         background: #ececec;
-        color: $sg-white;
+        color: $sg-black;
     }
 
     @media all and (min-width: $sg-bp-med) {
-        width: 42px;
+        width: 55px;
 
-        &.sg-size-px {
-            width: 35px;
-        }
+        // &.sg-size-px {
+        //     width: 35px;
+        // }
     }
 }
 
@@ -613,51 +614,48 @@ $sg-border-radius-med : 6px;
 
 .typeahead {
     border: 0;
-    background: $sg-grey;
-    color: $sg-grey;
+    background: #ECECEC;
+    color: $sg-black;
     width: 100%;
     right: 0;
     padding: 0.8em;
-    text-transform: lowercase;
+    text-transform: capitalize;
 
     &:focus {
-        background: $sg-grey;
-        color: $sg-white;
+        background: #ECECEC;
+        color: $sg-black;
     }
 }
 
 .tt-input {
-    background: $sg-grey;
-    color: $sg-white;
+    background: #ececec !important;
+    color: $sg-black;
     text-transform: capitalize;
+    font-size: 14px;
 
     &:focus {
-        text-transform: lowercase;
+        text-transform: capitalize;
     }
 }
 
 .tt-hint {
-    text-transform: lowercase;
-    // border-bottom-right-radius: $sg-border-radius-med;
-    // border-bottom-left-radius: $sg-border-radius-med;
+    text-transform: capitalize;
 }
 
 .tt-dropdown-menu {
-    text-transform: lowercase;
-    background-color: $sg-grey;
+    text-transform: capitalize;
+    background-color: #ececec;
     width: 100%;
-    // border-bottom-right-radius: $sg-border-radius-med;
-    // border-bottom-left-radius: $sg-border-radius-med;
 }
 
 .tt-suggestion {
-    color: $sg-grey-light;
+    color: $sg-black;
     font-size: 75%;
     padding: 0.8em;
 }
 
 .tt-suggestion.tt-cursor {
-    color: $sg-white;
+    color: $sg-black;
     background: $sg-tint-2;
 }
 
@@ -1442,7 +1440,6 @@ $sg-border-radius-med : 6px;
 
     a, input {
         cursor: help !important;
-        font-weight: 500;
     }
 
     &:hover {

@@ -394,12 +394,13 @@
 */
 .sg-input {
   margin: -2px 0 0 0;
-  padding: 0.1em .2em;
+  padding: 0.1em .3em;
   border: 0;
   font-weight: 600;
+  font-size: 14px;
   background: #fff;
   color: #191919;
-  width: 30px;
+  width: 55px;
   text-align: right;
   -webkit-transition: all 0.1s ease-out;
           transition: all 0.1s ease-out;
@@ -410,14 +411,11 @@
 .sg-input:active, .sg-input:focus {
   outline: 0;
   background: #ececec;
-  color: #fff;
+  color: #191919;
 }
 @media all and (min-width: 42em) {
   .sg-input {
-    width: 38px;
-  }
-  .sg-input.sg-size-px {
-    width: 35px;
+    width: 55px;
   }
 }
 
@@ -492,45 +490,46 @@
 
 .typeahead {
   border: 0;
-  background: #ccc;
-  color: #ccc;
+  background: #ECECEC;
+  color: #191919;
   width: 100%;
   right: 0;
   padding: 0.8em;
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 .typeahead:focus {
-  background: #ccc;
-  color: #fff;
+  background: #ECECEC;
+  color: #191919;
 }
 
 .tt-input {
-  background: #ccc;
-  color: #fff;
+  background: #ececec !important;
+  color: #191919;
   text-transform: capitalize;
+  font-size: 14px;
 }
 .tt-input:focus {
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
 .tt-hint {
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
 .tt-dropdown-menu {
-  text-transform: lowercase;
-  background-color: #ccc;
+  text-transform: capitalize;
+  background-color: #ececec;
   width: 100%;
 }
 
 .tt-suggestion {
-  color: #f6f6f6;
+  color: #191919;
   font-size: 75%;
   padding: 0.8em;
 }
 
 .tt-suggestion.tt-cursor {
-  color: #fff;
+  color: #191919;
   background: rgba(255, 255, 255, 0.25);
 }
 
@@ -1309,7 +1308,6 @@
 }
 .has-annotation a, .has-annotation input {
   cursor: help !important;
-  font-weight: 500;
 }
 .has-annotation:hover {
   -webkit-box-shadow: 0 0 10px #191919;
