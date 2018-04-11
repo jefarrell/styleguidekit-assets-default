@@ -61,14 +61,13 @@
 $sg-font : "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 
 // Colors
-$sg-black : #000;
+$sg-black : #191919;
 $sg-white : #fff;
-$sg-gray-light : #eee;
-$sg-gray-light-2 : #ddd;
-$sg-gray-light-3 : #ccc;
-$sg-gray-light-4 : #999;
-$sg-gray : #808080;
-$sg-gray-dark : #222;
+$sg-gray-light : #f6f6f6;
+$sg-gray-light-2 : #efef;
+$sg-gray : #ccc;
+$sg-gray-dark-2 : #aeaeae;
+$sg-gray-dark : #818084;
 $sg-tint : rgba(255,255,255,0.05);
 $sg-tint-2 : rgba(255,255,255,0.25);
 $sg-tone : rgba(0,0,0,0.1);
@@ -152,7 +151,7 @@ $sg-border-radius-med : 6px;
 #patternlab-html, #patternlab-body {
     margin: 0;
     padding: 0;
-    background: $sg-gray-light-2;
+    background: $sg-gray-light;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -170,16 +169,18 @@ $sg-border-radius-med : 6px;
 * and tools.
 */
 .sg-header {
-    background: $sg-black;
+    background: $sg-white;
     color: $sg-white;
     font-family: $sg-font;
+    font-weight: 700;
+    border-bottom: 1px solid $sg-gray-dark-2;
     text-transform: uppercase;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 4;
     width: 100%;
-
+    
     /**
     * All lists appearing in the header
     */
@@ -194,16 +195,17 @@ $sg-border-radius-med : 6px;
     */
     a {
         font-size: $sg-font-size-sm;
-        color: $sg-gray;
+        color: $sg-gray-dark;
         text-decoration: none;
         line-height: 1;
-        padding: 1em 0.7em;
+        letter-spacing: .1px;
+        font-size: 24px;
+        padding: 1em 18px;
         transition: background $sg-animate-quick ease-out;
         transition: color $sg-animate-quick ease-out;
 
         &:hover, &:focus, &.active {
-            color: $sg-white;
-            background: $sg-gray-dark;
+            color: $sg-black;
         }
     }
 }
@@ -301,13 +303,12 @@ $sg-border-radius-med : 6px;
     * Dropdown caret after accordion handle
     */
     &:after {
-        content: '▼';
+        content: '⌵';
         color: $sg-tint-2;
         display: inline-block;
-        font-size: 7px;
+        font-size: 12px;
         position: relative;
-        top: -1px;
-        right: -2px;
+        right: -4px;
         transition: all $sg-animate-quick ease-out;
 
         @media all and (min-width: $sg-bp-med) {
@@ -323,7 +324,7 @@ $sg-border-radius-med : 6px;
 
     &.active {
         color: $sg-white;
-        background: $sg-gray-dark;
+        background: $sg-white;
 
         &:after {
             top: -2px;
@@ -351,16 +352,19 @@ $sg-border-radius-med : 6px;
     * List items appearing in each accordion panel
     */
     li {
-        background: $sg-gray-dark;
+        border-left: 1px solid $sg-gray-dark-2;
+        border-right: 1px solid $sg-gray-dark-2;
+        background: $sg-white;
 
         &:last-child {
-            border-bottom-left-radius: $sg-border-radius-med;
-            border-bottom-right-radius: $sg-border-radius-med;
+            border-bottom: 1px solid $sg-gray-dark-2;
+            // border-bottom-left-radius: $sg-border-radius-med;
+            // border-bottom-right-radius: $sg-border-radius-med;
 
-            a {
-                border-bottom-left-radius: $sg-border-radius-med;
-                border-bottom-right-radius: $sg-border-radius-med;
-            }
+            // a {
+            //     border-bottom-left-radius: $sg-border-radius-med;
+            //     border-bottom-right-radius: $sg-border-radius-med;
+            // }
         }
     }
 
@@ -396,7 +400,14 @@ $sg-border-radius-med : 6px;
 */
 .sg-sub-nav {
     list-style: none;
+    li {
+        border: none;
 
+        &:last-child {
+            border: none;
+        }
+    }
+        
     a {
         text-transform: none;
         padding-left: 1rem;
@@ -485,7 +496,7 @@ $sg-border-radius-med : 6px;
     margin: -2px 0 0 0;
     padding: 0.1em;
     border: 0;
-    border-radius: $sg-border-radius;
+    // border-radius: $sg-border-radius;
     background: $sg-black;
     color: $sg-gray;
     width: 25px;
@@ -494,7 +505,7 @@ $sg-border-radius-med : 6px;
 
     &:hover {
         color: $sg-white;
-        background: $sg-gray-dark;
+        background: $sg-gray;
     }
 
     &:active, &:focus {
@@ -598,7 +609,7 @@ $sg-border-radius-med : 6px;
 
 .typeahead {
     border: 0;
-    background: $sg-gray-dark;
+    background: $sg-gray;
     color: $sg-gray;
     width: 100%;
     right: 0;
@@ -623,16 +634,16 @@ $sg-border-radius-med : 6px;
 
 .tt-hint {
     text-transform: lowercase;
-    border-bottom-right-radius: $sg-border-radius-med;
-    border-bottom-left-radius: $sg-border-radius-med;
+    // border-bottom-right-radius: $sg-border-radius-med;
+    // border-bottom-left-radius: $sg-border-radius-med;
 }
 
 .tt-dropdown-menu {
     text-transform: lowercase;
     background-color: $sg-gray;
     width: 100%;
-    border-bottom-right-radius: $sg-border-radius-med;
-    border-bottom-left-radius: $sg-border-radius-med;
+    // border-bottom-right-radius: $sg-border-radius-med;
+    // border-bottom-left-radius: $sg-border-radius-med;
 }
 
 .tt-suggestion {
@@ -930,7 +941,7 @@ $sg-border-radius-med : 6px;
     .sg-pattern-state {
         font-size: 80%;
         font-weight: normal;
-        color: $sg-gray-light-3;
+        color: $sg-gray-light-2;
     }
 }
 
@@ -948,9 +959,9 @@ $sg-border-radius-med : 6px;
     line-height: 1;
     color: $sg-gray;
     font-weight: normal;
-    border: 1px solid $sg-gray-light-2;
-    border-top-left-radius: $sg-border-radius-med;
-    border-top-right-radius: $sg-border-radius-med;
+    border: 1px solid $sg-gray-light;
+    // border-top-left-radius: $sg-border-radius-med;
+    // border-top-right-radius: $sg-border-radius-med;
     transition: background $sg-animate-quick ease-out;
 
     span {
@@ -981,7 +992,7 @@ $sg-border-radius-med : 6px;
 */
 .sg-pattern-extra {
     background: $sg-gray-light;
-    border-top: 1px solid $sg-gray-light-2;
+    border-top: 1px solid $sg-gray-light;
     margin-bottom: $sg-space;
     overflow: hidden;
     max-height: 1px;
@@ -997,8 +1008,8 @@ $sg-border-radius-med : 6px;
     }
 
     &.active {
-        border: 1px solid $sg-gray-light-2;
-        border-radius: $sg-border-radius-med;
+        border: 1px solid $sg-gray-light;
+        // border-radius: $sg-border-radius-med;
         border-top-right-radius: 0;
         max-height: 50em;
     }
@@ -1046,7 +1057,7 @@ $sg-border-radius-med : 6px;
 .sg-pattern-desc {
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid $sg-gray-light-3;
+    border-bottom: 1px solid $sg-gray-light-2;
 
     p:last-child {
         margin: 0;
@@ -1081,7 +1092,7 @@ $sg-border-radius-med : 6px;
         margin: 0 !important;
         line-height: 1 !important;
         flex: 1 1 auto;
-        border-radius: 0 $sg-border-radius-med $sg-border-radius-med $sg-border-radius-med !important;
+        // border-radius: 0 $sg-border-radius-med $sg-border-radius-med $sg-border-radius-med !important;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -1125,6 +1136,8 @@ $sg-border-radius-med : 6px;
     text-transform: capitalize;
 
     a {
+        font-weight: bold;
+        text-decoration: none;
         transition: color $sg-animate-quick ease-out;
     }
 }
@@ -1185,11 +1198,11 @@ $sg-border-radius-med : 6px;
         line-height: 1;
         padding: 0.5em 1em;
         background: $sg-gray-light;
-        border: 1px solid $sg-gray-light-3;
+        border: 1px solid $sg-gray-light-2;
         border-bottom: 0;
         color: $sg-gray;
-        border-top-right-radius: $sg-border-radius-med;
-        border-top-left-radius: $sg-border-radius-med;
+        // border-top-right-radius: $sg-border-radius-med;
+        // border-top-left-radius: $sg-border-radius-med;
         text-decoration: none;
         text-transform: capitalize;
 
@@ -1219,8 +1232,6 @@ $sg-border-radius-med : 6px;
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    border: 1px solid $sg-gray-light-3;
-    border-radius: 0 $sg-border-radius-med $sg-border-radius-med $sg-border-radius-med;
     overflow: hidden;
 }
 
@@ -1254,7 +1265,7 @@ $sg-border-radius-med : 6px;
     line-height: 1.4;
     font-size: 90%;
     background: $sg-black;
-    color: $sg-gray-light-3;
+    color: $sg-gray-light-2;
     position: fixed;
     top: auto;
     bottom: 0;
@@ -1311,7 +1322,7 @@ $sg-border-radius-med : 6px;
     */
     .sg-pattern-extra-info {
         a {
-            color: $sg-gray-light-3;
+            color: $sg-gray-light-2;
 
             &:hover, &:focus {
                 color: $sg-gray-light;
@@ -1351,7 +1362,7 @@ $sg-border-radius-med : 6px;
     background: $sg-black;
     color: $sg-gray;
     border: 0;
-    border-radius: $sg-border-radius-med $sg-border-radius-med 0 0;
+    // border-radius: $sg-border-radius-med $sg-border-radius-med 0 0;
     display: inline-block;
     padding: 0.9em 0.7em 0.1em;
     text-transform: uppercase;
@@ -1368,7 +1379,7 @@ $sg-border-radius-med : 6px;
     }
 
     &:hover, &:focus {
-        background: $sg-gray-dark;
+        background: $sg-gray;
         color: $sg-gray-light;
     }
 }
@@ -1428,7 +1439,7 @@ $sg-border-radius-med : 6px;
     margin-left: -10px !important;
     width: 25px !important;
     height: 25px !important;
-    border-radius: 13px !important;
+    // border-radius: 13px !important;
     text-align: center !important;
     background: #444 !important;
     color: #fff !important;
@@ -1439,7 +1450,7 @@ $sg-border-radius-med : 6px;
 
 .sg-annotations {
     margin: 1rem 0;
-    border-top: 1px solid $sg-gray-light-2;
+    border-top: 1px solid $sg-gray-light;
     padding-top: 0.5rem;
 }
 
@@ -1458,7 +1469,7 @@ $sg-border-radius-med : 6px;
         position: relative;
         padding-left: 1.5rem;
         margin-bottom: 1rem;
-        border-radius: $sg-border-radius-med;
+        // border-radius: $sg-border-radius-med;
         transition: background $sg-animate-quick ease;
 
         &:before {
@@ -1473,7 +1484,7 @@ $sg-border-radius-med : 6px;
             border-radius: 50%;
             padding: 2px;
             text-align: center;
-            background: $sg-gray-light-3;
+            background: $sg-gray-light-2;
             color: $sg-gray-dark;
             position: absolute;
             top: 1px;
