@@ -90,7 +90,7 @@
 #patternlab-html, #patternlab-body {
   margin: 0;
   padding: 0;
-  background: #f6f6f6;
+  background: #fff;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -107,7 +107,8 @@
   color: #fff;
   font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   font-weight: 700;
-  border-bottom: 1px solid #aeaeae;
+  border-bottom: 1px solid #e3e3e3;
+  text-transform: capitalize;
   position: fixed;
   top: 0;
   left: 0;
@@ -154,6 +155,7 @@
 .sg-nav-toggle {
   display: inline-block;
   position: relative;
+  text-transform: capitalize;
   z-index: 2;
 }
 @media all and (min-width: 42em) {
@@ -204,7 +206,7 @@
   }
   .sg-nav > li > ol {
     position: absolute;
-    top: 3.5em;
+    top: 3.2em;
     left: 0;
   }
 }
@@ -225,11 +227,12 @@
   */
 }
 .sg-acc-handle:after {
-  content: '⌵';
+  content: '▼';
   display: inline-block;
-  font-size: 12px;
+  font-size: 9px;
   position: relative;
   right: -4px;
+  color: #fff;
   -webkit-transition: all 0.1s ease-out;
           transition: all 0.1s ease-out;
 }
@@ -280,12 +283,12 @@
   */
 }
 .sg-acc-panel li {
-  border-left: 1px solid #aeaeae;
-  border-right: 1px solid #aeaeae;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
   background: #fff;
 }
 .sg-acc-panel li:last-child {
-  border-bottom: 1px solid #aeaeae;
+  border-bottom: 1px solid #e3e3e3;
 }
 .sg-acc-panel a {
   display: block;
@@ -298,6 +301,7 @@
   position: absolute;
   left: auto;
   right: 0;
+  margin-top: 15px;
 }
 
 /**
@@ -401,11 +405,11 @@
           transition: all 0.1s ease-out;
 }
 .sg-input:hover {
-  background: #ccc;
+  background: #ececec;
 }
 .sg-input:active, .sg-input:focus {
   outline: 0;
-  background: #ccc;
+  background: #ececec;
   color: #fff;
 }
 @media all and (min-width: 42em) {
@@ -503,6 +507,7 @@
 .tt-input {
   background: #ccc;
   color: #fff;
+  text-transform: capitalize;
 }
 .tt-input:focus {
   text-transform: lowercase;
@@ -623,7 +628,7 @@
   text-align: center;
   width: 100%;
   position: fixed;
-  top: 3.5em;
+  top: 6em;
   bottom: 0;
   left: 0;
   right: 0;
@@ -755,7 +760,7 @@
 */
 .sg-pattern-head {
   position: relative;
-  padding: 0.5rem 0 20px;
+  padding: 0.5rem 0 8px;
   line-height: 1.3;
   font-size: 90%;
   color: #ccc;
@@ -781,17 +786,14 @@
 }
 .sg-pattern-title a {
   display: inline-block;
-  padding: 1em 0 0.3rem;
-  color: #ccc !important;
+  padding: 20px 0 0;
+  color: #191919 !important;
   text-decoration: none;
   cursor: pointer;
   font-weight: bold;
 }
 .sg-pattern-title a:hover, .sg-pattern-title a:focus {
-  color: #191919 !important;
-}
-.sg-pattern-title a:hover {
-  border-bottom: 1px solid #191919 !important;
+  color: #818084 !important;
 }
 .sg-pattern-title .sg-pattern-state {
   font-size: 80%;
@@ -810,16 +812,21 @@
   right: 0;
   z-index: 1;
   padding: 0.65em;
+  height: 30px;
+  width: 30px;
   line-height: 1;
   color: #191919;
   font-weight: normal;
-  background: #fff;
+  text-align: center;
+  background: #efefef;
   border: 1px solid #efefef;
+  border-bottom: 1px solid #e3e3e3;
   -webkit-transition: background 0.1s ease-out;
           transition: background 0.1s ease-out;
 }
 .sg-pattern-extra-toggle span {
   display: inline-block;
+  padding-top: 6px;
 }
 .sg-pattern-extra-toggle:hover, .sg-pattern-extra-toggle:focus, .sg-pattern-extra-toggle.active {
   background: #efefef;
@@ -840,8 +847,8 @@
 * like pattern description, lineage, code, and more
 */
 .sg-pattern-extra {
-  background: #efefef;
-  border-top: 1px solid #efefef;
+  background: #ececec;
+  border-top: 1px solid #e3e3e3;
   margin-bottom: 1em;
   overflow: hidden;
   max-height: 1px;
@@ -886,7 +893,7 @@
   padding: 0.5rem 0.5rem 0;
   line-height: 1.4;
   font-size: 90%;
-  color: #ccc;
+  color: #818084;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -906,7 +913,8 @@
 .sg-pattern-desc {
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #efefef;
+  color: #818084;
+  border-bottom: 1px solid #ccc;
 }
 .sg-pattern-desc p:last-child {
   margin: 0;
@@ -932,6 +940,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 90%;
+  min-height: 180px;
   padding: 0.5rem;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -986,8 +995,9 @@
 * Pattern Category Title
 */
 .sg-pattern-category-title {
-  font-size: 1.4rem !important;
-  color: #818084 !important;
+  font-weight: 500;
+  font-size: 2rem !important;
+  color: #191919 !important;
   letter-spacing: .3px;
   margin: 0 0 0.2rem;
   text-transform: capitalize;
@@ -995,15 +1005,12 @@
 .sg-pattern-category-title a {
   font-weight: bold;
   text-decoration: none;
-  color: #818084 !important;
+  color: #191919 !important;
   -webkit-transition: color 0.1s ease-out;
           transition: color 0.1s ease-out;
 }
-.sg-pattern-category-title a:hover {
-  border-bottom: 1px solid #191919;
-}
 .sg-pattern-category-title a:active, .sg-pattern-category-title a:focus, .sg-pattern-category-title a:hover {
-  color: #191919 !important;
+  color: #818084 !important;
 }
 
 /**
@@ -1054,6 +1061,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  background: #f6f6f6;
+  padding-top: 8px;
 }
 .sg-tabs-list li {
   float: left;
@@ -1071,7 +1080,7 @@
   text-transform: capitalize;
 }
 .sg-tabs-list a:hover {
-  color: #818084;
+  color: #191919;
 }
 
 /**
@@ -1080,10 +1089,10 @@
 * background color.
 */
 .sg-tab-title-active a {
-  color: #818084;
+  color: #191919;
 }
 .sg-tab-title-active a:hover, .sg-tab-title-active a:focus {
-  color: #818084;
+  color: #191919;
 }
 
 .sg-tabs-content {
@@ -1178,23 +1187,20 @@
           transition: bottom 0.3s ease-out;
 }
 .sg-modal .sg-pattern-breadcrumb {
-  font-size: 70%;
+  font-size: 12px;
   color: #ccc;
   margin-bottom: 0.5rem;
+}
+.sg-modal .sg-pattern-extra-code {
+  padding: 40px;
 }
 .sg-modal .sg-pattern-head {
   margin-bottom: 0.5rem;
 }
 .sg-modal .sg-pattern-title {
-  font-size: 1.4rem !important;
-  color: #818084;
+  font-size: 32px !important;
+  color: #fff !important;
   letter-spacing: .3px;
-}
-.sg-modal .sg-pattern-title:hover {
-  border-bottom: 1px solid #191919;
-}
-.sg-modal .sg-pattern-title:active, .sg-modal .sg-pattern-title:hover, .sg-modal .sg-pattern-title:focus {
-  color: #191919 !important;
 }
 .sg-modal .sg-pattern-extra {
   -webkit-box-flex: 1;
@@ -1213,7 +1219,8 @@
   color: #f6f6f6;
 }
 .sg-modal .sg-pattern-desc {
-  border-bottom-color: #ccc;
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  color: #aeaeae;
 }
 .sg-modal .sg-annotations {
   border-top-color: #ccc;
@@ -1230,10 +1237,11 @@
 .sg-modal-close-btn {
   font-size: 70%;
   background: #191919;
-  color: #ccc;
+  color: #fff;
   border: 0;
   display: inline-block;
   padding: 0.9em 0.7em 0.1em;
+  text-transform: capitalize;
   text-decoration: none;
   cursor: pointer;
   position: absolute;
@@ -1244,11 +1252,10 @@
   /* 2 */
 }
 .sg-modal.active .sg-modal-close-btn {
-  top: -1.5rem;
+  top: 20px;
 }
 .sg-modal-close-btn:hover, .sg-modal-close-btn:focus {
-  background: #ccc;
-  color: #f6f6f6;
+  color: #fff;
 }
 
 /**
@@ -1302,6 +1309,7 @@
 }
 .has-annotation a, .has-annotation input {
   cursor: help !important;
+  font-weight: 500;
 }
 .has-annotation:hover {
   -webkit-box-shadow: 0 0 10px #191919;
