@@ -361,13 +361,6 @@ $sg-border-radius-med : 6px;
 
         &:last-child {
             border-bottom: 1px solid #e3e3e3;
-            // border-bottom-left-radius: $sg-border-radius-med;
-            // border-bottom-right-radius: $sg-border-radius-med;
-
-            // a {
-            //     border-bottom-left-radius: $sg-border-radius-med;
-            //     border-bottom-right-radius: $sg-border-radius-med;
-            // }
         }
     }
 
@@ -414,7 +407,7 @@ $sg-border-radius-med : 6px;
 
     a {
         text-transform: none;
-        padding-left: 1rem;
+        padding-left: 30px;
     }
 }
 
