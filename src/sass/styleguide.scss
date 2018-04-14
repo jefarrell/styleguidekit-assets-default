@@ -83,7 +83,7 @@ $sg-space : 1em;
 $sg-doublespace : $sg-space*2;
 $sg-pad : 1em;
 $sg-pad-half : $sg-pad/2;
-$offset-top : 6em;
+$offset-top : 63px;
 
 // Breakpoints
 $sg-bp-small : 24em;
@@ -348,7 +348,7 @@ $sg-border-radius-med : 6px;
     margin: 0;
     padding: 0;
     list-style: none;
-    min-width: 10em;
+    min-width: 15em;
     transition: max-height $sg-animate-quick ease-out;
 
     /**
@@ -361,13 +361,6 @@ $sg-border-radius-med : 6px;
 
         &:last-child {
             border-bottom: 1px solid #e3e3e3;
-            // border-bottom-left-radius: $sg-border-radius-med;
-            // border-bottom-right-radius: $sg-border-radius-med;
-
-            // a {
-            //     border-bottom-left-radius: $sg-border-radius-med;
-            //     border-bottom-right-radius: $sg-border-radius-med;
-            // }
         }
     }
 
@@ -414,7 +407,7 @@ $sg-border-radius-med : 6px;
 
     a {
         text-transform: none;
-        padding-left: 1rem;
+        padding-left: 30px;
     }
 }
 
@@ -492,6 +485,11 @@ $sg-border-radius-med : 6px;
     margin: 0;
     border: 0;
     padding: 0;
+    text-transform: lowercase;
+
+    label {
+        text-transform: capitalize;
+    }
 }
 
 /**
@@ -1016,7 +1014,6 @@ $sg-border-radius-med : 6px;
 
     &.active {
         border: 1px solid $sg-grey-light;
-        // border-radius: $sg-border-radius-med;
         border-top-right-radius: 0;
         max-height: 50em;
     }
@@ -1488,7 +1485,6 @@ $sg-border-radius-med : 6px;
         position: relative;
         padding-left: 1.5rem;
         margin-bottom: 1rem;
-        // border-radius: $sg-border-radius-med;
         transition: background $sg-animate-quick ease;
 
         &:before {
