@@ -266,7 +266,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  min-width: 10em;
+  min-width: 15em;
   -webkit-transition: max-height 0.1s ease-out;
           transition: max-height 0.1s ease-out;
   /**
@@ -387,6 +387,10 @@
   margin: 0;
   border: 0;
   padding: 0;
+  text-transform: lowercase;
+}
+#sg-form label {
+  text-transform: capitalize;
 }
 
 /**
@@ -627,7 +631,7 @@
   text-align: center;
   width: 100%;
   position: fixed;
-  top: 6em;
+  top: 63px;
   bottom: 0;
   left: 0;
   right: 0;
