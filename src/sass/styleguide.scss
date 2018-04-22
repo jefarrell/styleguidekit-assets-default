@@ -205,8 +205,13 @@ $sg-border-radius-med : 6px;
         transition: background $sg-animate-quick ease-out;
         transition: color $sg-animate-quick ease-out;
 
-        &:hover, &:focus, &.active {
+        &:hover, &:focus {
             color: $sg-grey-dark;
+        }
+
+        &.active {
+            color: $sg-black;
+            font-weight: 700;
         }
     }
 }
@@ -325,12 +330,11 @@ $sg-border-radius-med : 6px;
     }
 
     &.active {
-        color: $sg-white;
         background: $sg-white;
 
         &:after {
             top: -2px;
-            color: $sg-grey;
+            color: $sg-black;
             -webkit-transform: rotate(180deg);
             -ms-transform: rotate(180deg);
             transform: rotate(180deg);
@@ -643,6 +647,8 @@ $sg-border-radius-med : 6px;
 .tt-dropdown-menu {
     text-transform: capitalize;
     background-color: #ececec;
+    border: 1px solid $sg-black;
+    border-top: 0;
     width: 100%;
 }
 
@@ -768,6 +774,7 @@ $sg-border-radius-med : 6px;
     left: 0;
     right: 0;
     z-index: 0;
+    background-color: #F2F2F2;
 }
 
 /**
@@ -919,7 +926,7 @@ $sg-border-radius-med : 6px;
     line-height: 1 !important;
     font-weight: bold !important;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 60px 0 0 0 !important;
     text-transform: capitalize !important;
 
     a {
@@ -1085,8 +1092,9 @@ $sg-border-radius-med : 6px;
     flex-direction: column;
     font-size: 90%;
     min-height: 180px;
-    padding: 0.5rem;
+    padding: 50px 40px;
     flex: 1 1 auto;
+    // padding: 50px 40px;
 
     /**
     * Code blocks
@@ -1300,7 +1308,7 @@ $sg-border-radius-med : 6px;
     }
 
     .sg-pattern-extra-code {
-        padding: 40px;
+        padding: 50px 40px;
     }
 
     /**
@@ -1337,6 +1345,7 @@ $sg-border-radius-med : 6px;
     * Pattern info links inside modal
     */
     .sg-pattern-extra-info {
+        padding: 45px 0 50px 50px;
         a {
             color: $sg-grey-light-2;
 
@@ -1393,6 +1402,7 @@ $sg-border-radius-med : 6px;
     /* 2 */
     .sg-modal.active & {
         top: 20px;
+        right: 10px;
     }
 
     &:hover, &:focus {
