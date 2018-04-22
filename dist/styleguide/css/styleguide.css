@@ -944,7 +944,7 @@
           flex-direction: column;
   font-size: 90%;
   min-height: 180px;
-  padding: 0.5rem;
+  padding: 50px 40px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -1195,7 +1195,7 @@
   margin-bottom: 0.5rem;
 }
 .sg-modal .sg-pattern-extra-code {
-  padding: 40px;
+  padding: 50px 40px;
 }
 .sg-modal .sg-pattern-head {
   margin-bottom: 0.5rem;
@@ -1214,6 +1214,9 @@
 }
 .sg-modal .sg-pattern-extra.active {
   max-height: none;
+}
+.sg-modal .sg-pattern-extra-info {
+  padding: 45px 0 50px 50px;
 }
 .sg-modal .sg-pattern-extra-info a {
   color: #efefef;
@@ -1256,6 +1259,7 @@
 }
 .sg-modal.active .sg-modal-close-btn {
   top: 20px;
+  right: 10px;
 }
 .sg-modal-close-btn:hover, .sg-modal-close-btn:focus {
   color: #fff;
