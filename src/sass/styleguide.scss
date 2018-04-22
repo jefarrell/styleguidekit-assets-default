@@ -205,8 +205,13 @@ $sg-border-radius-med : 6px;
         transition: background $sg-animate-quick ease-out;
         transition: color $sg-animate-quick ease-out;
 
-        &:hover, &:focus, &.active {
+        &:hover, &:focus {
             color: $sg-grey-dark;
+        }
+
+        &.active {
+            color: $sg-black;
+            font-weight: 700;
         }
     }
 }
@@ -325,12 +330,11 @@ $sg-border-radius-med : 6px;
     }
 
     &.active {
-        color: $sg-white;
         background: $sg-white;
 
         &:after {
             top: -2px;
-            color: $sg-grey;
+            color: $sg-black;
             -webkit-transform: rotate(180deg);
             -ms-transform: rotate(180deg);
             transform: rotate(180deg);

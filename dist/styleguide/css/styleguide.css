@@ -140,8 +140,12 @@
   -webkit-transition: color 0.1s ease-out;
           transition: color 0.1s ease-out;
 }
-.sg-header a:hover, .sg-header a:focus, .sg-header a.active {
+.sg-header a:hover, .sg-header a:focus {
   color: #818084;
+}
+.sg-header a.active {
+  color: #191919;
+  font-weight: 700;
 }
 
 /*------------------------------------*\
@@ -245,12 +249,11 @@
   color: #ccc;
 }
 .sg-acc-handle.active {
-  color: #fff;
   background: #fff;
 }
 .sg-acc-handle.active:after {
   top: -2px;
-  color: #ccc;
+  color: #191919;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
