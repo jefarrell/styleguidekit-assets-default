@@ -643,6 +643,8 @@ $sg-border-radius-med : 6px;
 .tt-dropdown-menu {
     text-transform: capitalize;
     background-color: #ececec;
+    border: 1px solid $sg-black;
+    border-top: 0;
     width: 100%;
 }
 
@@ -768,6 +770,7 @@ $sg-border-radius-med : 6px;
     left: 0;
     right: 0;
     z-index: 0;
+    background-color: #F2F2F2;
 }
 
 /**

@@ -523,6 +523,8 @@
 .tt-dropdown-menu {
   text-transform: capitalize;
   background-color: #ececec;
+  border: 1px solid #191919;
+  border-top: 0;
   width: 100%;
 }
 
@@ -636,6 +638,7 @@
   left: 0;
   right: 0;
   z-index: 0;
+  background-color: #F2F2F2;
 }
 
 /**
@@ -781,7 +784,7 @@
   line-height: 1 !important;
   font-weight: bold !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 60px 0 0 0 !important;
   text-transform: capitalize !important;
   /**
   * Pattern State that appears within a pattern title
