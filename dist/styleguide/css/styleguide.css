@@ -252,7 +252,7 @@
   background: #fff;
 }
 .sg-acc-handle.active:after {
-  top: -2px;
+  top: -4px;
   color: #191919;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
