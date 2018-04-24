@@ -365,6 +365,7 @@ $sg-border-radius-med : 6px;
 
         &:last-child {
             border-bottom: 1px solid #e3e3e3;
+            padding-bottom: 18px;
         }
     }
 
@@ -393,6 +394,11 @@ $sg-border-radius-med : 6px;
         left: auto;
         right: 0;
         margin-top: 15px;
+        li {
+            &:last-child {
+                padding-bottom: 0px !important;
+            }
+        }    
     }
 }
 
@@ -413,7 +419,7 @@ $sg-border-radius-med : 6px;
 
     a {
         text-transform: none;
-        padding-left: 30px;
+        padding-left: 40px;
     }
 }
 
@@ -618,7 +624,7 @@ $sg-border-radius-med : 6px;
 
 .typeahead {
     border: 0;
-    background: #ECECEC;
+    background: $sg-white;
     color: $sg-black;
     width: 100%;
     right: 0;
@@ -626,16 +632,21 @@ $sg-border-radius-med : 6px;
     text-transform: capitalize;
 
     &:focus {
-        background: #ECECEC;
+        background: $sg-white;
         color: $sg-black;
     }
 }
 
 .tt-input {
-    background: #ececec !important;
+    background: $sg-white !important;
     color: $sg-black;
     text-transform: capitalize;
-    font-size: 14px;
+    font-size: 12px;
+    border-top: 1px solid #e3e3e3;
+
+    ::-webkit-input-placeholder {
+        color: #cccccc;
+    }
 
     &:focus {
         text-transform: capitalize;
@@ -648,8 +659,8 @@ $sg-border-radius-med : 6px;
 
 .tt-dropdown-menu {
     text-transform: capitalize;
-    background-color: #ececec;
-    border: 1px solid $sg-black;
+    background-color: $sg-white;
+    border: 1px solid #e3e3e3;
     border-top: 0;
     width: 100%;
 }

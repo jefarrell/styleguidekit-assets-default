@@ -292,6 +292,7 @@
 }
 .sg-acc-panel li:last-child {
   border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 18px;
 }
 .sg-acc-panel a {
   display: block;
@@ -307,6 +308,9 @@
   left: auto;
   right: 0;
   margin-top: 15px;
+}
+.sg-acc-panel.sg-right li:last-child {
+  padding-bottom: 0px !important;
 }
 
 /**
@@ -325,7 +329,7 @@
 }
 .sg-sub-nav a {
   text-transform: none;
-  padding-left: 30px;
+  padding-left: 40px;
 }
 
 /*------------------------------------*\
@@ -499,7 +503,7 @@
 
 .typeahead {
   border: 0;
-  background: #ECECEC;
+  background: #fff;
   color: #191919;
   width: 100%;
   right: 0;
@@ -507,15 +511,19 @@
   text-transform: capitalize;
 }
 .typeahead:focus {
-  background: #ECECEC;
+  background: #fff;
   color: #191919;
 }
 
 .tt-input {
-  background: #ececec !important;
+  background: #fff !important;
   color: #191919;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 12px;
+  border-top: 1px solid #e3e3e3;
+}
+.tt-input ::-webkit-input-placeholder {
+  color: #cccccc;
 }
 .tt-input:focus {
   text-transform: capitalize;
@@ -527,8 +535,8 @@
 
 .tt-dropdown-menu {
   text-transform: capitalize;
-  background-color: #ececec;
-  border: 1px solid #191919;
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
   border-top: 0;
   width: 100%;
 }
